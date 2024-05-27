@@ -1,0 +1,125 @@
+---
+import Unity from "../icons/UnityIcon.astro"
+import CSharp from "../icons/CSharpIcon.astro"
+import Java from "../icons/JavaIcon.astro"
+import IntelliJ from "../icons/IntelliJIcon.astro"
+import Android from "../icons/AndroidIcon.astro"
+import VisualStudio from "../icons/VisualStudioIcon.astro"
+import GitHub from "../icons/GitHub.astro"
+
+const TAGS = 
+{
+    UNITY: 
+    {
+        name: "Unity",
+        class: "bg-black text-white",
+        image: Unity,
+    },
+    CSharp: 
+    {
+        name: "C#",
+        class: "bg-black text-white",
+        image: CSharp,
+    },
+    GooglePlay: 
+    {
+        name: "Google Play",
+        class: "bg-black text-white",
+        image: Android,
+    },
+    Java: 
+    {
+        name: "Java",
+        class: "bg-black text-white",
+        image: Java,
+    },
+    IntelliJ: 
+    {
+        name: "IntelliJ",
+        class: "bg-black text-white",
+        image: IntelliJ,
+    },
+    VisualStudio: 
+    {
+        name: "Visual Studio",
+        class: "bg-black text-white",
+        image: VisualStudio,
+    },
+    GitHub: 
+    {
+        name: "Github",
+        class: "bg-black text-white",
+        image: GitHub,
+    },
+}
+    
+
+const PROJECTS = [
+   {
+        title: 'DRuedaM\'s Expansion Craft',
+        description: 'The DRuedaM\'s Expansion Craft adds a lot of content!',
+        link: 'https://www.curseforge.com/minecraft/mc-mods/druedams-expansion-craft',
+        image: '',
+        tags: [TAGS.Java, TAGS.IntelliJ, TAGS.GooglePlay, TAGS.GitHub],
+   },
+   {
+        title: 'Pierre Le Mystere',
+        description: 'Put yourself in the shoes of a spy in a secret mission on an unexpected destination, the nearest coffee shop!',
+        link: 'https://creative-worlds.itch.io/pierrelemystere',
+        image: '',
+        tags: [TAGS.UNITY, TAGS.CSharp, TAGS.VisualStudio, TAGS.GitHub],
+   },
+   {
+        title: 'Clicky Marbles',
+        description: 'Compra mejoras, personaliza tu entorno de juego, mira la colección, desbloquea canicas raras y especiales para disfrutar jugando y relajarte!',
+        link: 'https://play.google.com/store/apps/details?id=com.CreativeWorlds.MarbleAnmals&hl=es&gl=US',
+        image: '../assets/ClickyMarbles.png',
+        tags: [TAGS.UNITY, TAGS.CSharp,TAGS.VisualStudio, TAGS.GitHub],
+   },
+   {
+        title: 'The defense of the geometry',
+        description: '',
+        link: 'https://creative-worlds.itch.io/the-defense-of-the-geometry',
+        image: '',
+        tags: [TAGS.UNITY, TAGS.CSharp,TAGS.VisualStudio,TAGS.GitHub],
+   }
+]
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link }) => (
+    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+  <div class="w-full md:w-1/2">
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+        <a href={link} >
+            <img alt="Foto" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+        </a>
+    </div>
+  </div>
+
+  <div class="w-full md:w-1/2 md:max-w-lg">
+    <h3 class="text-2xl font-bold text-[#fee100] dark:text-gray-100">
+      {title}
+    </h3>
+    <div class="flex flex-wrap mt-2">
+      <ul class="flex flex-row mb-2 gap-x-2">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full  text-xs ${tag.class} p-1`}
+              >
+                <tag.image class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+      <div class="mt-2 text-white dark:text-gray-400">{description}</div>
+    </div>
+  </div>
+</article>
+    ))
+  }
+</div>

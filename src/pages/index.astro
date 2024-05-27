@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Badge from '../components/Badge.astro';
+import LinkedInIcon from "../icons/Linkedin.astro"
+import GithubIcon from "../icons/GitHub.astro"
+import ResumeIcon from "../icons/Resume.astro"
+import Socialpill from '../components/Socialpill.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import ExperienceItem from '../components/ExperienceItem.astro';
+import Projects from '../components/Projects.astro';
+import Footer from '../components/Footer.astro'
+---
+
+<Layout title="David Rueda Martin Portfolio - Game Programmer and Software Developer">
+	<main>		
+
+		<SectionContainer id="top" class="py-44 pb-34">
+			<h1 id="title" class=" transition text-[#fee100] text-6xl font-bold flex justify-center flex-row pb-5 ">Game Programmer</h1>
+			<h1 class="text-white text-5xl font-bold flex justify-center flex-row pb-7">David Rueda Martín</h1>
+			<h2 class="text-3xl text-wrap opacity-80 text-justify">
+				Hola, me llamo David Rueda . 
+				Tengo más de 4 años de experiencia usando el motor gráfico Unity creando 
+				mis propios proyectos personales. </h2>
+
+			<nav class="flex justify-center items-center gap-5 mt-7">
+					<Socialpill href="https://www.linkedin.com/in/david-rueda-martin">
+						<LinkedInIcon class="size-6"/>
+						Linkedin
+					</Socialpill>
+					<Socialpill href="../public/assets/CV_David_Rueda_Martín.pdf">
+						<ResumeIcon class="size-6"/>
+						Resume
+					</Socialpill>
+					<Socialpill href="https://github.com/DRuedaM">
+						<GithubIcon class="size-6"/>
+						GitHub
+					</Socialpill>
+				</nav>
+		</SectionContainer>
+
+		<SectionContainer id="experience">
+			<h2 class="text-3xl font-semibold mb-6">Laboral Experience</h2>
+			<Experience/>
+		</SectionContainer>
+
+		<SectionContainer id="experience">
+			<h2 class="text-3xl font-semibold mb-6">Personal Projects</h2>
+			<Projects/>
+		</SectionContainer>
+
+		<Footer></Footer>
+	</main>
+</Layout>
+
