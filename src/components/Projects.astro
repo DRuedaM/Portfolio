@@ -71,7 +71,7 @@ const PROJECTS = [
   },
   {
     title: "The defense of the geometry",
-    description: "",
+    description: "Defend the perfect shape, the triangle",
     link: "https://creative-worlds.itch.io/the-defense-of-the-geometry",
     image: "../assets/thedefenseofthegeometry.png",
     tags: [TAGS.UNITY, TAGS.CSharp, TAGS.VisualStudio, TAGS.GitHub],
@@ -84,7 +84,7 @@ const PROJECTS = [
     PROJECTS.map(({ image, title, description, tags, link }) => (
       <article class="flex flex-col space-x-0 space-y-10 p-14 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2 ">
-            <a href={link}>
+            <a href={link} target="_blank">
               <img
                 alt="Foto"
                 class="object-contain size-1 w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
@@ -104,7 +104,7 @@ const PROJECTS = [
               {tags.map((tag) => (
                 <li>
                   <span
-                    class={`whitespace-nowrap max-w-full flex gap-x-2 rounded-full text-xs ${tag.class} px-2 py-2  border-[#ff7f71]`}
+                    class={`whitespace-nowrap max-w-full flex gap-x-2 rounded-full text-xs ${tag.class} px-2 py-2 border-2 border-gray-500`}
                   >
                     <tag.image class="size-4" />
                     {tag.name}
