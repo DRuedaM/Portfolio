@@ -11,15 +11,16 @@ import SectionContainer from '../components/SectionContainer.astro';
 import ExperienceItem from '../components/ExperienceItem.astro';
 import Projects from '../components/Projects.astro';
 import Footer from '../components/Footer.astro'
+import Skills from '../components/Skills.astro';
 ---
 
-<Layout title="David Rueda Martin Portfolio - Game Programmer and Software Developer">
+<Layout title="David Rueda Martin - Game Programmer and Software Developer Portfolio" description="The official webpage about David Rueda Martín and his last works!">
 	<main>		
-
-		<SectionContainer id="top" class="py-44 pb-34">
-			<h1 id="title" class=" transition text-[#fee100] text-6xl font-bold flex justify-center flex-row pb-5 ">Game Programmer</h1>
+		<SectionContainer id="top" class="py-20 pb-34">
+			<img class="size-44 rounded-full mb-5 mx-auto items-center" src="../../public/assets/photo.jpg" alt="David Rueda Photo"/>
+			<h1 id="title" class=" transition text-[#fee100] text-6xl font-bold flex justify-center flex-row pb-5">Game Programmer</h1>
 			<h1 class="text-white text-5xl font-bold flex justify-center flex-row pb-7">David Rueda Martín</h1>
-			<h2 class="text-3xl text-wrap opacity-80 text-justify">
+			<h2 class="text-3xl opacity-80 text-justify text-pretty p-4">
 				Hola, me llamo David Rueda . 
 				Tengo más de 4 años de experiencia usando el motor gráfico Unity creando 
 				mis propios proyectos personales. </h2>
@@ -41,16 +42,23 @@ import Footer from '../components/Footer.astro'
 		</SectionContainer>
 
 		<SectionContainer id="experience">
-			<h2 class="text-3xl font-semibold mb-6">Laboral Experience</h2>
+			<h2 class="text-3xl font-semibold mb-6 text-[#fee100]">Laboral Experience</h2>
 			<Experience/>
 		</SectionContainer>
 
 		<SectionContainer id="experience">
-			<h2 class="text-3xl font-semibold mb-6">Personal Projects</h2>
+			<h2 class="text-3xl font-semibold mb-6 text-[#fee100]">Personal Projects</h2>
 			<Projects/>
 		</SectionContainer>
 
-		<Footer></Footer>
+		<SectionContainer id="experience">
+			<h2 class="text-3xl font-semibold mb-6 text-[#fee100]">Technical Experience</h2>
+			<Skills/>
+		</SectionContainer>
+
+
+
+		<Footer/>
 	</main>
 </Layout>
 

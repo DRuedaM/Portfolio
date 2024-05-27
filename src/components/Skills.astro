@@ -1,0 +1,59 @@
+---
+const SKILLS = 
+[
+    {
+        name:'Unity'
+    },   
+    {
+        name:'C#'
+    },
+    {
+        name:'Java'
+    },
+    {
+        name:'IntelliJ'
+    },
+    {
+        name:'Git'
+    },
+    {
+        name:'GitHub'
+    },
+    {
+        name:'Visual Studio'
+    },
+    {
+        name:'Eclipse'
+    },
+    {
+        name:'SQL'
+    },
+    {
+        name:'JSON'
+    },
+    {
+        name:'XML'
+    },
+    {
+        name:'Trello'
+    },
+    {
+        name:'LaTeX'
+    },
+    {
+        name:'Audacity'
+    },
+    {
+        name:'Astro'
+    },
+
+]
+---
+<ol class="p-10  relative items-center flex flex-wrap">
+    {
+        SKILLS.map( skill => 
+        (
+            <li class= " m-2 px-5 py-2 border-2 rounded-lg border-[#ff7f71] text-[#ff7f71] hover:scale-110 transition">{skill.name}</li>
+        ))
+    }
+</ol>
