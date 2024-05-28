@@ -6,8 +6,11 @@ import IntelliJ from "../icons/IntelliJIcon.astro";
 import Android from "../icons/AndroidIcon.astro";
 import VisualStudio from "../icons/VisualStudioIcon.astro";
 import GitHub from "../icons/GitHub.astro";
+import Itchio from "../icons/Itchio.astro"
+import Curseforge from "../icons/Curseforge.astro"
+import Carousel from "./Carousel.astro";
 
-const TAGS = {
+export const TAGS = {
   UNITY: {
     name: "Unity",
     class: "text-white",
@@ -43,79 +46,128 @@ const TAGS = {
     class: "text-white",
     image: GitHub,
   },
+  Itchio: {
+    name: "Itch.io",
+    class: "text-white",
+    image: Itchio,
+  },
+  Curseforge: {
+    name: "Curseforge",
+    class: "text-white",
+    image: Curseforge,
+  },
 };
 
-const PROJECTS = [
+export const PROJECTS = [
   {
     title: "DRuedaM's Expansion Craft",
     description: "The DRuedaM's Expansion Craft adds a lot of content!",
     link: "https://www.curseforge.com/minecraft/mc-mods/druedams-expansion-craft",
-    image: "../assets/expansioncraft.png",
-    tags: [TAGS.Java, TAGS.IntelliJ, TAGS.GooglePlay, TAGS.GitHub],
+    tags: [TAGS.Curseforge,TAGS.Java, TAGS.IntelliJ, TAGS.GooglePlay, TAGS.GitHub],
+    image: '../assets/expansion-craft/expansioncraft.png',
+    images: ['../assets/clicky-marbles/cap1.png','../assets/clicky-marbles/cap2.png','../assets/clicky-marbles/cap1.png','../assets/clicky-marbles/cap1.png'],
   },
   {
     title: "Pierre Le Mystere",
     description:
       "Put yourself in the shoes of a spy in a secret mission on an unexpected destination, the nearest coffee shop!",
     link: "https://creative-worlds.itch.io/pierrelemystere",
-    image: "../assets/Pierrelemystere.png",
-    tags: [TAGS.UNITY, TAGS.CSharp, TAGS.VisualStudio, TAGS.GitHub],
-  },
+    tags: [TAGS.Itchio,TAGS.UNITY, TAGS.CSharp, TAGS.VisualStudio, TAGS.GitHub],
+    image: '../assets/pierre-le-mystere/Pierrelemystere.png',
+    images: ['../assets/clicky-marbles/cap1.png','../assets/clicky-marbles/cap2.png','../assets/clicky-marbles/cap1.png','../assets/clicky-marbles/cap1.png'],  },
   {
     title: "Clicky Marbles",
     description:
       "Compra mejoras, personaliza tu entorno de juego, mira la colección, desbloquea canicas raras y especiales para disfrutar jugando y relajarte!",
     link: "https://play.google.com/store/apps/details?id=com.CreativeWorlds.MarbleAnmals&hl=es&gl=US",
-    image: "../assets/ClickyMarbles.png",
-    tags: [TAGS.UNITY, TAGS.CSharp, TAGS.VisualStudio, TAGS.GitHub],
+    tags: [TAGS.GooglePlay,TAGS.UNITY, TAGS.CSharp, TAGS.VisualStudio, TAGS.GitHub],
+    image: '../assets/clicky-marbles/cap1.png',
+    images: ['../assets/clicky-marbles/cap1.png','../assets/clicky-marbles/cap2.png','../assets/clicky-marbles/cap1.png','../assets/clicky-marbles/cap1.png'],
   },
   {
     title: "The defense of the geometry",
     description: "Defend the perfect shape, the triangle",
     link: "https://creative-worlds.itch.io/the-defense-of-the-geometry",
-    image: "../assets/thedefenseofthegeometry.png",
-    tags: [TAGS.UNITY, TAGS.CSharp, TAGS.VisualStudio, TAGS.GitHub],
+    tags: [TAGS.Itchio,TAGS.UNITY, TAGS.CSharp, TAGS.VisualStudio, TAGS.GitHub],
+    image: '../assets/defense-geometry/thedefenseofthegeometry.png',
+    images: ['../assets/clicky-marbles/cap1.png','../assets/clicky-marbles/cap2.png','../assets/clicky-marbles/cap1.png','../assets/clicky-marbles/cap1.png'],
   },
 ];
+
+
 ---
-
-<div class="flex-row columns-2 ">
-  {
-    PROJECTS.map(({ image, title, description, tags, link }) => (
-      <article class="flex flex-col space-x-0 space-y-10 p-14 group md:flex-row md:space-x-8 md:space-y-0">
-        <div class="w-full md:w-1/2 ">
-            <a href={link} target="_blank">
-              <img
-                alt="Foto"
-                class="object-contain size-1 w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-                loading="lazy"
-                src={image}
-              />
-            </a>
-  
-        </div>
-
-        <div class="w-full md:w-1/2 md:max-w-lg">
-          <h3 class="text-2xl font-bold text-[#ff7f71] dark:text-gray-100">
-            {title}
-          </h3>
-          <div class="flex flex-wrap mt-2 ">
-            <ul class="flex flex-row mb-2 gap-x-2">
+{
+  PROJECTS.map(({title, description, tags, link, image }) => (
+    
+    <article class="h-96 my-4 flex items-center justify-around w-full bg-[#232323] ">
+      <div class="p-10 justify-center flex w-[50rem]">
+        <img
+          class="" 
+          src={image} 
+          alt="Foto" 
+          loading="lazy">
+      </div>
+      <!--<Carousel images={images}/>-->
+      <div class="w-[50rem] p-10">
+        <h3 class="text-center text-4xl font-bold text-[#ff7f71] mb-10">{title}</h3>
+          <ul class="flex  justify-center">
               {tags.map((tag) => (
                 <li>
                   <span
-                    class={`whitespace-nowrap max-w-full flex gap-x-2 rounded-full text-xs ${tag.class} px-2 py-2 border-2 border-gray-500`}
+                    class={` bg-opacity-80 whitespace-nowrap max-w-full flex gap-x-2 rounded-full p-3 mr-4 border-2 border-[#ff7f71]  text-[#ff7f71]`}
                   >
-                    <tag.image class="size-4" />
-                    {tag.name}
+                    <tag.image class="size-5" />
+                    <p class="align-middle text-sm">{tag.name}</p> 
                   </span>
                 </li>
               ))}
             </ul>
-            <div class="mt-2 text-white dark:text-gray-400">{description}</div>
-          </div>
+        <div class="p-10">
+          <p class="flex justify-center text-pretty">{description}</p>
         </div>
-      </article>
+        <div class="p-5 text-center ">
+          <a href={link} target="_blank" class="bg-[#fee100] px-10 py-3 text-black rounded">Link</a>
+        </div>
+      </div>
+    </article>
     ))
   }
-</div>
+
+
+
+      <!--
+        <article class="flex flex-col space-x-0 space-y-10 p-14 group md:flex-row md:space-x-8 md:space-y-0">
+          <div class="w-full md:w-1/2 ">
+              <a href={link} target="_blank">
+                <img
+                  alt="Foto"
+                  class="object-contain size-1 w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                  loading="lazy"
+                  src={image}
+                />
+              </a>
+    
+          </div>
+
+          <div class="w-full md:w-1/2 md:max-w-lg">
+            <h3 class="text-2xl font-bold text-[#ff7f71] dark:text-gray-100">
+              {title}
+            </h3>
+            <div class="flex flex-wrap mt-2 ">
+              <ul class="flex flex-row mb-2 gap-x-2">
+                {tags.map((tag) => (
+                  <li>
+                    <span
+                      class={`whitespace-nowrap max-w-full flex gap-x-2 rounded-full text-xs ${tag.class} px-2 py-2 border-2 border-gray-500`}
+                    >
+                      <tag.image class="size-4" />
+                      {tag.name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <div class="mt-2 text-white dark:text-gray-400">{description}</div>
+            </div>
+          </div>
+        </article>
+       -->
