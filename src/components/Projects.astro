@@ -106,7 +106,7 @@ export const PROJECTS = [
 {
   PROJECTS.map(({title, description, tags, link, image, infopage }) => (
     
-    <article class="md:h-96 my-4 lg:flex flex-row items-center justify-around w-full bg-[#232323] ">
+    <article class="md:h-96 my-4 md:flex flex-row items-center justify-around w-full bg-[#232323] ">
       <div class="p-10 justify-center flex md:w-[50rem]">
         <img
           class="" 
@@ -116,7 +116,7 @@ export const PROJECTS = [
       </div>
       <!--<Carousel images={images}/>-->
       <div class="md:w-[50rem] p-10">
-        <h3 class="text-center lg:text-4xl text-3xl font-bold text-[#fee100] mb-10">{title}</h3>
+        <h3 class="text-center lg:text-4xl text-3xl font-bold text-[#fee100] mb-5">{title}</h3>
           <ul class="flex justify-center md:flex-nowrap md:gap-0 gap-2 p-2 md:static relative items-center flex-wrap">
               {tags.map((tag) => (
                 <li>
@@ -129,8 +129,8 @@ export const PROJECTS = [
                 </li>
               ))}
             </ul>
-        <div class="p-10">
-          <p class="flex text-justify justify-center text-pretty lg:text-xl">{description}</p>
+        <div class="p-5">
+          <p class="flex text-center justify-center text-pretty md:text-xl">{description}</p>
         </div>
         <div class="flex justify-center">
           <a href={link} target="_blank" class= "font-bold rounded-md  border-white/10 border-2 flex text-center justify-center items-center
@@ -140,8 +140,8 @@ export const PROJECTS = [
           </a>
 
           <a href={infopage} target="_blank" class= "ml-10 font-bold rounded-md  md:border-white/10 md:border-2 flex text-center justify-center items-center
-            gap-x-2 py-3 px-3  md:hover:scale-105 md:bg-white/5 md:hover:bg-[#ff7f71] md:transition bg-[#ff7f71]  w-40">
-            <span class="text-xl"><span class="sm:flex hidden">+</span> info</span> 
+            gap-x-2 py-3 px-3  md:hover:scale-105 md:bg-white/5 md:hover:bg-[#ff7f71] md:transition bg-[#ff7f71] w-40">
+            <span class="text-xl"><span class="sm:static hidden">+</span> info</span> 
             <InfoIcon></InfoIcon>
           </a>
         </div>
