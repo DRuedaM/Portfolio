@@ -109,65 +109,28 @@ export const PROJECTS = [
       </div>
       <!--<Carousel images={images}/>-->
       <div class="w-[50rem] p-10">
-        <h3 class="text-center text-4xl font-bold text-[#ff7f71] mb-10">{title}</h3>
-          <ul class="flex  justify-center">
+        <h3 class="text-center text-4xl font-bold text-[#fee100] mb-10">{title}</h3>
+          <ul class="flex justify-center">
               {tags.map((tag) => (
                 <li>
                   <span
-                    class={` bg-opacity-80 whitespace-nowrap max-w-full flex gap-x-2 rounded-full p-3 mr-4 border-2 border-[#ff7f71]  text-[#ff7f71]`}
+                    class=" whitespace-nowrap max-w-full flex gap-x-2 rounded-full p-3 mr-4 border-2 border-[#ff7f71]"
                   >
-                    <tag.image class="size-5" />
+                    <tag.image class="size-5 fill-[#ff7f71]" />
                     <p class="align-middle text-sm">{tag.name}</p> 
                   </span>
                 </li>
               ))}
             </ul>
         <div class="p-10">
-          <p class="flex justify-center text-pretty">{description}</p>
+          <p class="flex text-justify justify-center text-pretty">{description}</p>
         </div>
-        <div class="p-5 text-center ">
-          <a href={link} target="_blank" class="bg-[#fee100] px-10 py-3 text-black rounded">Link</a>
-        </div>
+          <a href={link} target="_blank" class= "rounded-full  border-[#fee100] border-2 flex justify-center items-center
+gap-x-2 py-3 px-5 bg-white/5 hover:scale-105 hover:bg-[#fee100] transition hover:text-black">
+            Link
+            </a>
+      
       </div>
     </article>
     ))
   }
-
-
-
-      <!--
-        <article class="flex flex-col space-x-0 space-y-10 p-14 group md:flex-row md:space-x-8 md:space-y-0">
-          <div class="w-full md:w-1/2 ">
-              <a href={link} target="_blank">
-                <img
-                  alt="Foto"
-                  class="object-contain size-1 w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-                  loading="lazy"
-                  src={image}
-                />
-              </a>
-    
-          </div>
-
-          <div class="w-full md:w-1/2 md:max-w-lg">
-            <h3 class="text-2xl font-bold text-[#ff7f71] dark:text-gray-100">
-              {title}
-            </h3>
-            <div class="flex flex-wrap mt-2 ">
-              <ul class="flex flex-row mb-2 gap-x-2">
-                {tags.map((tag) => (
-                  <li>
-                    <span
-                      class={`whitespace-nowrap max-w-full flex gap-x-2 rounded-full text-xs ${tag.class} px-2 py-2 border-2 border-gray-500`}
-                    >
-                      <tag.image class="size-4" />
-                      {tag.name}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <div class="mt-2 text-white dark:text-gray-400">{description}</div>
-            </div>
-          </div>
-        </article>
-       -->
