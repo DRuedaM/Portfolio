@@ -9,6 +9,9 @@ import GitHub from "../icons/GitHub.astro";
 import Itchio from "../icons/Itchio.astro"
 import Curseforge from "../icons/Curseforge.astro"
 import Carousel from "./Carousel.astro";
+import LinkIcon from "../icons/LinkIcon.astro";
+import InfoIcon from "../icons/InfoIcon.astro"
+
 
 export const TAGS = {
   UNITY: {
@@ -65,6 +68,7 @@ export const PROJECTS = [
     link: "https://www.curseforge.com/minecraft/mc-mods/druedams-expansion-craft",
     tags: [TAGS.Curseforge,TAGS.Java, TAGS.IntelliJ, TAGS.GooglePlay, TAGS.GitHub],
     image: '../assets/expansion-craft/expansioncraft.png',
+    infopage: '',
     images: ['../assets/clicky-marbles/cap1.png','../assets/clicky-marbles/cap2.png','../assets/clicky-marbles/cap1.png','../assets/clicky-marbles/cap1.png'],
   },
   {
@@ -74,6 +78,7 @@ export const PROJECTS = [
     link: "https://creative-worlds.itch.io/pierrelemystere",
     tags: [TAGS.Itchio,TAGS.UNITY, TAGS.CSharp, TAGS.VisualStudio, TAGS.GitHub],
     image: '../assets/pierre-le-mystere/Pierrelemystere.png',
+    infopage: '',
     images: ['../assets/clicky-marbles/cap1.png','../assets/clicky-marbles/cap2.png','../assets/clicky-marbles/cap1.png','../assets/clicky-marbles/cap1.png'],  },
   {
     title: "Clicky Marbles",
@@ -82,6 +87,7 @@ export const PROJECTS = [
     link: "https://play.google.com/store/apps/details?id=com.CreativeWorlds.MarbleAnmals&hl=es&gl=US",
     tags: [TAGS.GooglePlay,TAGS.UNITY, TAGS.CSharp, TAGS.VisualStudio, TAGS.GitHub],
     image: '../assets/clicky-marbles/cap1.png',
+    infopage: '',
     images: ['../assets/clicky-marbles/cap1.png','../assets/clicky-marbles/cap2.png','../assets/clicky-marbles/cap1.png','../assets/clicky-marbles/cap1.png'],
   },
   {
@@ -90,6 +96,7 @@ export const PROJECTS = [
     link: "https://creative-worlds.itch.io/the-defense-of-the-geometry",
     tags: [TAGS.Itchio,TAGS.UNITY, TAGS.CSharp, TAGS.VisualStudio, TAGS.GitHub],
     image: '../assets/defense-geometry/thedefenseofthegeometry.png',
+    infopage: '',
     images: ['../assets/clicky-marbles/cap1.png','../assets/clicky-marbles/cap2.png','../assets/clicky-marbles/cap1.png','../assets/clicky-marbles/cap1.png'],
   },
 ];
@@ -97,7 +104,7 @@ export const PROJECTS = [
 
 ---
 {
-  PROJECTS.map(({title, description, tags, link, image }) => (
+  PROJECTS.map(({title, description, tags, link, image, infopage }) => (
     
     <article class="h-96 my-4 flex items-center justify-around w-full bg-[#232323] ">
       <div class="p-10 justify-center flex w-[50rem]">
@@ -125,10 +132,19 @@ export const PROJECTS = [
         <div class="p-10">
           <p class="flex text-justify justify-center text-pretty">{description}</p>
         </div>
-          <a href={link} target="_blank" class= "rounded-full  border-[#fee100] border-2 flex justify-center items-center
-gap-x-2 py-3 px-5 bg-white/5 hover:scale-105 hover:bg-[#fee100] transition hover:text-black">
-            Link
-            </a>
+        <div class="flex justify-center">
+          <a href={link} target="_blank" class= "font-bold rounded-md  border-white/10 border-2 flex text-center justify-center items-center
+            gap-x-2 py-3 px-5  hover:scale-105 bg-white/5 hover:bg-[#fee100] transition hover:text-black w-40">
+            <LinkIcon></LinkIcon>
+          </a>
+
+          <a href={infopage} target="_blank" class= "ml-10 font-bold rounded-md  border-white/10 border-2 flex text-center justify-center items-center
+            gap-x-2 py-3 px-3  hover:scale-105 bg-white/5 hover:bg-[#ff7f71] transition  w-20">
+            <span class="text-xl">+</span> 
+            <InfoIcon></InfoIcon>
+          </a>
+        </div>
+          
       
       </div>
     </article>
