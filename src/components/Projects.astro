@@ -11,6 +11,8 @@ import Curseforge from "../icons/Curseforge.astro"
 import Carousel from "./Carousel.astro";
 import LinkIcon from "../icons/LinkIcon.astro";
 import InfoIcon from "../icons/InfoIcon.astro"
+import Springboot from "../icons/Springboot.astro"
+import AndroidStudio from "../icons/AndroidStudioIcon.astro"
 
 
 export const TAGS = {
@@ -59,9 +61,28 @@ export const TAGS = {
     class: "text-white",
     image: Curseforge,
   },
+  Springboot: {
+    name: "Springboot",
+    class: "text-white",
+    image: Springboot,
+  },
+  AndroidStudio: {
+    name: "Android studio",
+    class: "text-white",
+    image: AndroidStudio,
+  },
 };
 
 export const PROJECTS = [
+  {
+    title: "Naves Control Access System",
+    description: "Software created to my academic institution used at my graduation made up by 3 repositories",
+    link: "https://creative-worlds.itch.io/the-defense-of-the-geometry",
+    tags: [TAGS.Springboot, TAGS.AndroidStudio,TAGS.Java,TAGS.IntelliJ, TAGS.GitHub],
+    image: '../assets/naves-control-system/NavesQRLogo.png',
+    infopage: '',
+    images: ['../assets/clicky-marbles/cap1.png','../assets/clicky-marbles/cap2.png','../assets/clicky-marbles/cap1.png','../assets/clicky-marbles/cap1.png'],
+  },
   {
     title: "DRuedaM's Expansion Craft",
     description: "A minecraft mod for the Java version 1.20.1, published on Curseforge",

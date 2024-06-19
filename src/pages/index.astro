@@ -1,64 +1,90 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Badge from '../components/Badge.astro';
-import LinkedInIcon from "../icons/Linkedin.astro"
-import GithubIcon from "../icons/GitHub.astro"
-import ResumeIcon from "../icons/Resume.astro"
-import Socialpill from '../components/Socialpill.astro';
-import Experience from '../components/Experience.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import ExperienceItem from '../components/ExperienceItem.astro';
-import Projects from '../components/Projects.astro';
-import Footer from '../components/Footer.astro'
-import Skills from '../components/Skills.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../icons/Linkedin.astro";
+import GithubIcon from "../icons/GitHub.astro";
+import ResumeIcon from "../icons/Resume.astro";
+import Socialpill from "../components/Socialpill.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import ExperienceItem from "../components/ExperienceItem.astro";
+import Projects from "../components/Projects.astro";
+import Footer from "../components/Footer.astro";
+import Skills from "../components/Skills.astro";
 ---
 
-<Layout title="David Rueda Martin - Game Programmer and Software Developer Portfolio" description="The official webpage about David Rueda Martín and his last works on Game programming an Software development">
-	<main>		
+<Layout
+	title="David Rueda Martin - Game Programmer and Software Developer Portfolio"
+	description="The official webpage about David Rueda Martín and his last works on Game programming an Software development"
+>
+	<main>
 		<SectionContainer id="top" class="py-20 pb-34">
-			<img class="size-44 rounded-full mb-5 mx-auto items-center" src="../../assets/photo.jpg" alt="David Rueda Photo"/>
-			<h1 class="text-white lg:text-6xl md:text-5xl text-3xl font-bold flex justify-center flex-row pb-7 ">David Rueda Martín</h1>
-			<h1 id="title" class="transition-all duration-500 text-[#fee100]  lg:text-5xl md:text-4xl text-2xl font-bold flex justify-center flex-row pb-5">Game Programmer</h1>
-			<h2 class="lg:text-3xl md:2xl text-xl opacity-80 text-center text-pretty lg:px-80 md:px-48 px-12 py-5">
-				I'm a Game Programmer who loves developing games focused on the <span class="font-bold text-[#fee100]">Gameplay aspect</span> and <span class="font-bold text-[#fee100] text-opacity-100">Game juice</span>    
+			<img
+				class="size-44 rounded-full mb-5 mx-auto items-center"
+				src="../../assets/photo.jpg"
+				alt="David Rueda Photo"
+			/>
+			<h1
+				class="text-white lg:text-6xl md:text-5xl text-3xl font-bold flex justify-center flex-row pb-7"
+			>
+				David Rueda Martín
+			</h1>
+			<h1
+				class="transition-all duration-500 text-[#fee100] lg:text-5xl md:text-4xl text-2xl font-bold flex justify-center flex-row pb-5"
+			>
+				Game Programmer &nbsp; <span class="text-white">And</span> &nbsp;<span class="text-[#ff7f71]"> &nbsp;Software Developer</span>
+			</h1>
+			<h2
+				class="lg:text-3xl md:2xl text-xl opacity-80 text-center text-pretty lg:px-80 md:px-48 px-12 py-5"
+			>
+				I'm a Game Programmer who loves developing games focused on the <span
+					class="font-bold text-[#fee100]">Gameplay aspect</span
+				> and <span class="font-bold text-[#fee100] text-opacity-100"
+					>Game juice</span
+				>
 				with years of experience in Unity and programming languages.
 			</h2>
 
 			<nav class="flex justify-center items-center gap-5 mt-7">
-					<Socialpill href="https://www.linkedin.com/in/david-rueda-martin">
-						<LinkedInIcon class="sm:size-6 size-4"/>
-						Linkedin
-					</Socialpill>
-					<Socialpill href="../assets/CV_David_Rueda_Martin.pdf">
-						<ResumeIcon class="sm:size-6 size-4"/>
-						Resume
-					</Socialpill>
-					<Socialpill href="https://github.com/DRuedaM">
-						<GithubIcon class="sm:size-6 size-4"/>
-						GitHub
-					</Socialpill>
-				</nav>
+				<Socialpill
+					href="https://www.linkedin.com/in/david-rueda-martin"
+				>
+					<LinkedInIcon class="sm:size-6 size-4" />
+					Linkedin
+				</Socialpill>
+				<Socialpill href="../assets/CV_David_Rueda_Martin.pdf">
+					<ResumeIcon class="sm:size-6 size-4" />
+					Resume
+				</Socialpill>
+				<Socialpill href="https://github.com/DRuedaM">
+					<GithubIcon class="sm:size-6 size-4" />
+					GitHub
+				</Socialpill>
+			</nav>
 		</SectionContainer>
 
 		<SectionContainer id="experience">
-			<h2 class="text-4xl font-semibold mb-14 text-[#fee100]">Laboral Experience</h2>
-			<Experience/>
+			<h2 class="text-4xl font-semibold mb-14 text-[#fee100]">
+				Laboral Experience
+			</h2>
+			<Experience />
 		</SectionContainer>
 
 		<SectionContainer id="experience">
-			<h2 class="text-4xl font-semibold mb-14 text-[#fee100]">Personal Projects</h2>
-			<Projects/>
+			<h2 class="text-4xl font-semibold mb-14 text-[#fee100]">
+				Personal Projects
+			</h2>
+			<Projects />
 		</SectionContainer>
 
 		<SectionContainer id="experience">
-			<h2 class="text-4xl font-semibold mb-14 text-[#fee100]">Technical Experience</h2>
-			<Skills/>
+			<h2 class="text-4xl font-semibold mb-14 text-[#fee100]">
+				Technical Experience
+			</h2>
+			<Skills />
 		</SectionContainer>
 
-
-
-		<Footer/>
+		<Footer />
 	</main>
 </Layout>
-
