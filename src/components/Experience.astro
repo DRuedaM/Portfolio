@@ -1,6 +1,13 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro"
 const EXPERIENCE = [
+{
+        date:  'Agoust 2024 - Present',
+        title: 'Java Software Developer',
+        company: 'Minsait/Indra',
+        link: 'https://www.indracompany.com',
+        description: 'Java Software Developer',
+    },
     {
         date:  'March 2024 - June 2024',
         title: 'Internship developer',
@@ -17,7 +24,7 @@ const EXPERIENCE = [
     },
 ]
 ---
-<ol class="flex-row lg:columns-2 border-gray-200 dark:border-gray-700 lg:ml-3 mb-10">         
+<ol class="flex-col lg:columns border-gray-200 dark:border-gray-700 lg:ml-3 mb-10">         
     {
         EXPERIENCE.map(experience => 
         (
